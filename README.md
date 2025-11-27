@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Project: Library React
+
+- Library React app that displays and manages a collection of books using a simple, extendable UI and client-side routing.
+- Designed for easy extension (filtering, pagination, search) and includes protected routes for private views.
+
+### Key Features
+
+- **Book List:** Renders the library from `public/books.json` via the `Books` component.
+- **Book Details:** Per-book view at `/books/:bookId` using `BookDetails`.
+- **Protected Routes:** `PrivateRoute` guards private pages (e.g., secret/admin views).
+- **Global State:** `BooksContext` (React Context API) provides app-wide book data and state.
+- **Routing & Navigation:** `react-router-dom` handles routes, redirects, and a `NotFound` page.
+- **Basic Accessibility & Styling:** Plain CSS files (`App.css`, `index.css`) with attention to readable lists.
+
+### Tech Stack
+
+- **Frontend:** React 18 (functional components, hooks).
+- **Routing:** `react-router-dom`.
+- **State Management:** React Context API (`BooksContext.js`).
+- **Styling:** Plain CSS (`App.css`, `index.css`).
+- **Data Source:** Static `public/books.json` (easily replaceable with an API).
+- **Tooling:** Create React App conventions, `npm`/Node.js.
+- **Testing:** Jest + React Testing Library (`setupTests.js`).
+- **Version Control:** Git.
