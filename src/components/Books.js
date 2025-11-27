@@ -7,6 +7,11 @@ export default function Books() {
     const search = query.get("search") || "";
     const books = useContext(BooksContext);
 
+    //http://localhost:3000/?search=in
+    //http://localhost:3000/?search=Catcher
+    //http://localhost:3000/?search=The%20Lord%20of%20the%20Rings
+    const filteredBooks = books.filter(book => book.title.toLowerCase().includes(search.toLowerCase()));
+
     useEffect(() => {
         //http://localhost:3000/?search=erica
         console.log("query :", query);
@@ -16,7 +21,7 @@ export default function Books() {
         <div>
             <h1>All Books</h1>
             <ul>
-                {books.map((book, index) => (
+                {filteredBooks.map((book, index) => (
                     <li key={index}>{
                         book.title} by {book.author}
                     </li>
